@@ -31,16 +31,11 @@ class Student extends CI_Controller
 
     public function save()
     {
-        // echo '<pre>';
-        // print_r($this->input->post());
-        // die('x');
         $result = $this->Student_model->save($this->input->post());
 
         $data['judul'] = 'New Student';
         $data['message'] = 'Insert Success!';
 
         $this->load->view('student/form', $data);
-
-        // redirect('/Student/');
     }
 }
